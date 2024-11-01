@@ -2,60 +2,60 @@
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
 ! Version: 1.1.0
-!
+
 !-------------------------------------------------------------------------------!
-!
+
 ! Youtube home page
-!
+
 ! Disable all sections not containing videos on the home page
-!
+
 www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer
-!
+
 ! TODO
 ! Remove all content from home page (see if the initial page when viewing
 ! Youtube incognito can be displayed instead)
 ! Or redirect to Subscriptions page
-!
+
 !-------------------------------------------------------------------------------!
-!
+
 ! Youtube Search
-!
-! TODO
-! Hide nonsense on Youtube Search
-! Or view the Videos page directly
+
+! Hide related searches and related results from the YouTube search results, only leaving organic matches for your search
+www.youtube.com##ytd-search ytd-item-section-renderer ytd-shelf-renderer
+www.youtube.com##ytd-search ytd-item-section-renderer ytd-horizontal-card-list-renderer
+
 !-------------------------------------------------------------------------------!
-!
+
 ! Youtube playback
-!
+
 ! Disable youtube live chat
-!
+
 www.youtube.com###chat:remove()
 ! TODO Youtube mobile
-!
+
 ! Related videos sidebar when watching a video
-!
+
+! TOOO ytd-watch maybe?
 www.youtube.com###related
 m.youtube.com##ytm-watch ytm-item-section-renderer[data-content-type="related"]
-!
+
 ! Hide "smartimation" animations
 ! Hide the rainbow-colored border animation around the subscribe button
 ! https://github.com/yokoffing/filterlists/pull/117
 www.youtube.com##yt-smartimation > *:not(.smartimation__content)
 ! TODO Youtube mobile
-!
+
 !-------------------------------------------------------------------------------!
-!
-! Disable Youtube Shorts
-!
+
 ! Hide Youtube Shorts reels
 www.youtube.com##ytd-reel-shelf-renderer
-! TODO Youtube mobile
-!
+m.youtube.com##ytm-reel-shelf-renderer
+
 !-------------------------------------------------------------------------------!
-!
+
 ! Remove Youtube mixes and radios
-!
+
 ! TODO
-!
+
 
 
