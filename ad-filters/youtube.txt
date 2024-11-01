@@ -1,0 +1,50 @@
+! Title: Youtube Annoyances
+! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
+! Homepage: https://github.com/evenost-helx/public/tree/master/ad-filters
+! Version: 1.0.0
+!
+!-------------------------------------------------------------------------------!
+!
+! Youtube home page
+!
+! Disable all sections not containing videos on the home page
+!
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer
+!
+! TODO
+! Remove all content from home page (see if the initial page when viewing
+! Youtube incognito can be displayed instead)
+! Or redirect to Subscriptions page
+!
+!-------------------------------------------------------------------------------!
+!
+! Youtube Search
+!
+! TODO
+! Hide nonsense on Youtube Search
+! Or view the Videos page directly
+!-------------------------------------------------------------------------------!
+!
+! Youtube playback
+!
+! Disable youtube live chat
+!
+www.youtube.com###chat:remove()
+!
+! Related videos sidebard when watching a video
+!
+www.youtube.com###related
+m.youtube.com##ytm-watch ytm-item-section-renderer[data-content-type="related"]
+!
+!-------------------------------------------------------------------------------!
+!
+! Disable Youtube Shorts
+!
+! TODO
+!
+!-------------------------------------------------------------------------------!
+!
+! Remove Youtube mixes and radios
+!
+! TODO
+!
