@@ -28,22 +28,24 @@ www.youtube.com##ytd-search ytd-item-section-renderer ytd-horizontal-card-list-r
 
 ! Youtube playback
 
-! Disable youtube live chat
-
-www.youtube.com###chat:remove()
 ! TODO Youtube mobile
 
-! Related videos sidebar when watching a video
+! Disable youtube live chat
+www.youtube.com##ytd-watch-flexy #chat-container:remove() 
 
-! TOOO ytd-watch maybe?
-www.youtube.com###related
+! Related videos sidebar when watching a video
+www.youtube.com##ytd-watch-flexy #related
 m.youtube.com##ytm-watch ytm-item-section-renderer[data-content-type="related"]
 
 ! Hide "smartimation" animations
 ! Hide the rainbow-colored border animation around the subscribe button
-! https://github.com/yokoffing/filterlists/pull/117
-www.youtube.com##yt-smartimation > *:not(.smartimation__content)
-! TODO Youtube mobile
+www.youtube.com##ytd-watch-flexy yt-smartimation div.smartimation__border
+
+! Hide the like count under a video
+www.youtube.com##ytd-watch-flexy like-button-view-model div.yt-spec-button-shape-next__button-text-content
+
+! Hide the download button
+www.youtube.com##ytd-watch-flexy ytd-download-button-renderer
 
 !-------------------------------------------------------------------------------!
 
