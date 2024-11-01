@@ -1,22 +1,21 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2024.11.02.3
+! Version: 2024.11.02.4
 
 !-------------------------------------------------------------------------------!
 
 ! Youtube browse pages (Home, Subscription, Shorts)
 
+! Hide ALL results on the Home page
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-grid-renderer
+
+! TODO
 ! Disable all sections not containing videos on the Home page
-www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer
+!www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer
 
 ! Disable Youtube Shorts on the Subscriptions page
 www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts])
-
-! TODO
-! Remove all content from home page (see if the initial page when viewing
-! Youtube incognito can be displayed instead)
-! Or redirect to Subscriptions page
 
 !-------------------------------------------------------------------------------!
 
@@ -51,9 +50,10 @@ www.youtube.com##ytd-watch-flexy ytd-download-button-renderer
 
 !-------------------------------------------------------------------------------!
 
+! TODO
 ! Hide Youtube Shorts reels
-www.youtube.com##ytd-reel-shelf-renderer
-m.youtube.com##ytm-reel-shelf-renderer
+!www.youtube.com##ytd-reel-shelf-renderer
+!m.youtube.com##ytm-reel-shelf-renderer
 
 !-------------------------------------------------------------------------------!
 
