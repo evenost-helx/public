@@ -55,10 +55,3 @@ www.youtube.com##ytd-reel-shelf-renderer
 m.youtube.com##ytm-reel-shelf-renderer
 
 !-------------------------------------------------------------------------------!
-
-! Remove Youtube mixes and radios
-
-! TODO
-
-
-
