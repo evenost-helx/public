@@ -1,0 +1,9 @@
+! Title: Miscellaneous rules
+! Description: Website fixes and assorted Adguard rules
+! Homepage: https://github.com/evenost-helx/public/edit/master/filterlists/misc.txt
+! Version: 1.0.0
+
+!-------------------------------------------------------------------------------!
+
+! Dell product page does not open. Not sure if original filter is now fixed
+@@||dell.com$cookie=/^AMCVS?_.*AdobeOrg/
