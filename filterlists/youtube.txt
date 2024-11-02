@@ -1,7 +1,7 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2024.11.02.6
+! Version: 2024.11.02.7
 
 !-------------------------------------------------------------------------------!
 
@@ -9,7 +9,7 @@
 
 ! Hide ALL results on the Home page
 www.youtube.com##ytd-browse[page-subtype="home"]
-m.youtube.com##ytm-browse div[tab-title="Home"]
+m.youtube.com##ytm-browse div[tab-identifier="FEwhat_to_watch"]
 
 ! Disable all sections not containing videos on the Home page
 www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer
@@ -56,6 +56,13 @@ m.youtube.com##ytm-watch like-button-view-model div.yt-spec-button-shape-next__b
 
 ! Hide the download button
 www.youtube.com##ytd-watch-flexy ytd-download-button-renderer
+
+! Hide the overlay at the end of the video
+www.youtube.com##.videowall-endscreen
+
+! Prevent stats from live-updating
+! https://github.com/yokoffing/filterlists/pull/113
+||youtube.com/youtubei/v1/updated_metadata
 
 !-------------------------------------------------------------------------------!
 
