@@ -38,17 +38,21 @@ m.youtube.com##ytm-search ytm-media-item.big-shorts-singleton
 ! Disable youtube live chat
 www.youtube.com##ytd-watch-flexy #chat-container:remove() 
 
+! Hide the info box that allows enabling the live chat if hidden via UI
+www.youtube.com##ytd-watch-flexy ytd-watch-metadata #teaser-carousel
+
 ! Related videos sidebar when watching a video
 www.youtube.com##ytd-watch-flexy #related
-! TODO
-!m.youtube.com##ytm-watch ytm-item-section-renderer[data-content-type="related"]
+m.youtube.com##ytm-watch ytm-item-section-renderer[data-content-type="related"]
 
 ! Hide "smartimation" animations
 ! Hide the rainbow-colored border animation around the subscribe button
 www.youtube.com##ytd-watch-flexy yt-smartimation div.smartimation__border
+m.youtube.com##ytm-watch yt-smartimation div.smartimation__border
 
 ! Hide the like count under a video
 www.youtube.com##ytd-watch-flexy like-button-view-model div.yt-spec-button-shape-next__button-text-content
+m.youtube.com##ytm-watch like-button-view-model div.yt-spec-button-shape-next__button-text-content
 
 ! Hide the download button
 www.youtube.com##ytd-watch-flexy ytd-download-button-renderer
