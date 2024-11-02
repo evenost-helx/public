@@ -1,7 +1,7 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2024.11.02.5
+! Version: 2024.11.02.6
 
 !-------------------------------------------------------------------------------!
 
