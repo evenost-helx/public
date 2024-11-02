@@ -23,20 +23,18 @@ www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-section-rende
 
 ! Hide related searches and related results from the YouTube search results, only leaving organic matches for your search
 www.youtube.com##ytd-search ytd-item-section-renderer ytd-shelf-renderer
-www.youtube.com##ytd-search ytd-item-section-renderer ytd-horizontal-card-list-renderer
 
 !-------------------------------------------------------------------------------!
 
 ! Youtube playback
-
-! TODO Youtube mobile
 
 ! Disable youtube live chat
 www.youtube.com##ytd-watch-flexy #chat-container:remove() 
 
 ! Related videos sidebar when watching a video
 www.youtube.com##ytd-watch-flexy #related
-m.youtube.com##ytm-watch ytm-item-section-renderer[data-content-type="related"]
+! TODO
+!m.youtube.com##ytm-watch ytm-item-section-renderer[data-content-type="related"]
 
 ! Hide "smartimation" animations
 ! Hide the rainbow-colored border animation around the subscribe button
@@ -50,10 +48,11 @@ www.youtube.com##ytd-watch-flexy ytd-download-button-renderer
 
 !-------------------------------------------------------------------------------!
 
-! TODO
-! Hide Youtube Shorts reels
-!www.youtube.com##ytd-reel-shelf-renderer
-!m.youtube.com##ytm-reel-shelf-renderer
+! Youtube Shorts
+
+! Hide Youtube Shorts reels (affects many pages)
+www.youtube.com##ytd-reel-shelf-renderer
+m.youtube.com##ytm-reel-shelf-renderer
 
 !-------------------------------------------------------------------------------!
 
