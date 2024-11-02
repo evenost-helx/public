@@ -1,7 +1,7 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2024.11.02.7
+! Version: 2024.11.02.8
 
 !-------------------------------------------------------------------------------!
 
@@ -58,11 +58,15 @@ m.youtube.com##ytm-watch like-button-view-model div.yt-spec-button-shape-next__b
 www.youtube.com##ytd-watch-flexy ytd-download-button-renderer
 
 ! Hide the overlay at the end of the video
-www.youtube.com##.videowall-endscreen
+www.youtube.com##ytd-watch-flexy div.videowall-endscreen
 
 ! Prevent stats from live-updating
 ! https://github.com/yokoffing/filterlists/pull/113
 ||youtube.com/youtubei/v1/updated_metadata
+
+! The the extra tiles between the description box and the comments which mentions
+! the game name and a Youtube generic channel like "Gaming" to browse
+www.youtube.com##ytd-watch-flexy ytd-watch-metadata div#above-the-fold + ytd-metadata-row-container-renderer
 
 !-------------------------------------------------------------------------------!
 
