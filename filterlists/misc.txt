@@ -1,7 +1,7 @@
 ! Title: Miscellaneous rules
 ! Description: Website fixes and assorted Adguard rules
 ! Homepage: https://github.com/evenost-helx/public/edit/master/filterlists/misc.txt
-! Version: 1.0.0
+! Version: 2024.11.02.01
 
 !-------------------------------------------------------------------------------!
 
