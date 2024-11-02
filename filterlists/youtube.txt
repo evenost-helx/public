@@ -1,21 +1,23 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2024.11.02.4
+! Version: 2024.11.02.5
 
 !-------------------------------------------------------------------------------!
 
 ! Youtube browse pages (Home, Subscription, Shorts)
 
 ! Hide ALL results on the Home page
-www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-grid-renderer
+www.youtube.com##ytd-browse[page-subtype="home"]
+m.youtube.com##ytm-browse div[tab-title="Home"]
 
-! TODO
 ! Disable all sections not containing videos on the Home page
-!www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer
+m.youtube.com##ytm-browse div[tab-title="Home"] ytm-rich-section-renderer
 
 ! Disable Youtube Shorts on the Subscriptions page
 www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts])
+! Youtube mobile uses `ytm-reel-shelf-renderer` which is blocked further down
 
 !-------------------------------------------------------------------------------!
 
@@ -23,6 +25,11 @@ www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-section-rende
 
 ! Hide related searches and related results from the YouTube search results, only leaving organic matches for your search
 www.youtube.com##ytd-search ytd-item-section-renderer ytd-shelf-renderer
+m.youtube.com##ytm-search ytm-video-with-context-renderer:has(ytm-badge:contains(Related))
+
+# Hide single shorts shown as a separate item (instead of a reel) in search results
+! TODO Does desktop also have such results?
+m.youtube.com##ytm-search ytm-media-item.big-shorts-singleton
 
 !-------------------------------------------------------------------------------!
 
