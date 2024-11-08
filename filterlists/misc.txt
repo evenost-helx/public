@@ -1,9 +1,12 @@
 ! Title: Miscellaneous rules
 ! Description: Website fixes and assorted Adguard rules
 ! Homepage: https://github.com/evenost-helx/public/edit/master/filterlists/misc.txt
-! Version: 2024.11.02.01
+! Version: 2024.11.09-00
 
 !-------------------------------------------------------------------------------!
 
 ! Dell product page does not open. Not sure if original filter is now fixed
 @@||dell.com$cookie=/^AMCVS?_.*AdobeOrg/
+
+! Nerdfitness newsletter section in articles
+nerdfitness.com##.nf-in-post-signup
