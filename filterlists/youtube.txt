@@ -1,7 +1,7 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2024.11.02.8
+! Version: 2024.11.09-00
 
 !-------------------------------------------------------------------------------!
 
@@ -54,8 +54,11 @@ m.youtube.com##ytm-watch yt-smartimation div.smartimation__border
 www.youtube.com##ytd-watch-flexy like-button-view-model div.yt-spec-button-shape-next__button-text-content
 m.youtube.com##ytm-watch like-button-view-model div.yt-spec-button-shape-next__button-text-content
 
-! Hide the download button
+! Hide the "Download" button
 www.youtube.com##ytd-watch-flexy ytd-download-button-renderer
+
+! Hide the "Clip" button
+www.youtube.com##ytd-watch-flexy yt-button-view-model:has(button[title=Clip])
 
 ! Hide the overlay at the end of the video
 www.youtube.com##ytd-watch-flexy div.videowall-endscreen
