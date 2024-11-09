@@ -1,7 +1,7 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2024.11.10-00
+! Version: 2024.11.10-01
 
 !-------------------------------------------------------------------------------!
 
@@ -81,8 +81,11 @@ m.youtube.com##ytm-reel-shelf-renderer
 
 ! Hide Youtube Shorts navbar item
 www.youtube.com##ytd-guide-entry-renderer:has(> a[title=Shorts])
+m.youtube.com##ytm-pivot-bar-item-renderer:has(> div[role=tab].pivot-shorts)
 
 ! Hide Youtube Shorts player
+! Need to remove them because they autoplay otherwise
 www.youtube.com##ytd-shorts:remove()
+m.youtube.com##shorts-player:remove()
 
 !-------------------------------------------------------------------------------!
