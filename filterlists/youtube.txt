@@ -1,7 +1,7 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2024.11.10-01
+! Version: 2024.11.10-02
 
 !-------------------------------------------------------------------------------!
 
@@ -43,7 +43,7 @@ www.youtube.com##ytd-watch-flexy ytd-watch-metadata #teaser-carousel
 
 ! Related videos sidebar when watching a video
 www.youtube.com##ytd-watch-flexy #related
-m.youtube.com##ytm-watch ytm-item-section-renderer[data-content-type="related"]
+m.youtube.com##ytm-watch ytm-item-section-renderer[section-identifier=related-items]
 
 ! Hide "smartimation" animations
 ! Hide the rainbow-colored border animation around the subscribe button
