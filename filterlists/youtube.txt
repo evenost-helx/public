@@ -1,7 +1,21 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2025.01.27
+! Version: 2025.01.27=02
+
+!-------------------------------------------------------------------------------!
+
+! Youtube Sidebar
+
+! Hide Youtube Shorts navbar item
+www.youtube.com##ytd-guide-entry-renderer:has(> a[title=Shorts])
+m.youtube.com##ytm-pivot-bar-item-renderer:has(> div[role=tab].pivot-shorts)
+
+! Hide Explore section from sidebar
+www.youtube.com##ytd-guide-renderer > #sections > ytd-guide-section-renderer:has(h3:contains(Explore))
+
+! Hide More from Youtube in the sidebar
+www.youtube.com##ytd-guide-renderer > #sections > ytd-guide-section-renderer:has(h3:contains(More from YouTube))
 
 !-------------------------------------------------------------------------------!
 
@@ -87,10 +101,6 @@ www.youtube.com##ytd-watch-flexy ytd-watch-metadata div#above-the-fold + ytd-met
 ! Hide Youtube Shorts reels (affects many pages)
 www.youtube.com##ytd-reel-shelf-renderer
 m.youtube.com##ytm-reel-shelf-renderer
-
-! Hide Youtube Shorts navbar item
-www.youtube.com##ytd-guide-entry-renderer:has(> a[title=Shorts])
-m.youtube.com##ytm-pivot-bar-item-renderer:has(> div[role=tab].pivot-shorts)
 
 ! Hide Youtube Shorts player
 ! Need to remove them because they autoplay otherwise
