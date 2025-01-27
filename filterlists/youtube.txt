@@ -1,7 +1,7 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2024.11.10-03
+! Version: 2025.01.27
 
 !-------------------------------------------------------------------------------!
 
@@ -34,6 +34,9 @@ m.youtube.com##ytm-search ytm-media-item.big-shorts-singleton
 !-------------------------------------------------------------------------------!
 
 ! Youtube playback
+
+! Disable youtube miniplayer
+||youtube.com/s/player/*/miniplayer.js
 
 ! Disable youtube live chat
 www.youtube.com##ytd-watch-flexy #chat-container:remove() 
