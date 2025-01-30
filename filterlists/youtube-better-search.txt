@@ -1,4 +1,4 @@
-! Title: Better Youtube Search
+! Title: Youtube Better Search
 ! Description: Block irrelevant Youtube Search results. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
 ! Version: 2025.01.31-00
