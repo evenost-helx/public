@@ -1,5 +1,5 @@
 ! Title: Youtube Waste Time Exceptions
-! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
+! Description: Exceptions filter to be enabled when wanting to explore content. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
 ! Version: 2025.01.31-00
 
