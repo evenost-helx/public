@@ -1,7 +1,7 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2025.01.31-01
+! Version: 2025.01.31-02
 
 !-------------------------------------------------------------------------------!
 
@@ -11,10 +11,6 @@ www.youtube.com##ytd-feed-nudge-renderer
 !-------------------------------------------------------------------------------!
 
 ! Youtube Sidebar
-
-! Hide Youtube Shorts navbar item
-www.youtube.com##ytd-guide-entry-renderer:has(> a[title=Shorts])
-m.youtube.com##ytm-pivot-bar-item-renderer:has(> div[role=tab].pivot-shorts)
 
 ! Hide Explore section from sidebar
 www.youtube.com##ytd-guide-renderer > #sections > ytd-guide-section-renderer:has(h3:contains(Explore))
@@ -34,21 +30,6 @@ m.youtube.com##ytm-browse div[tab-identifier="FEwhat_to_watch"]
 www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer
 m.youtube.com##ytm-browse div[tab-title="Home"] ytm-rich-section-renderer
 
-! Disable Youtube Shorts on the Subscriptions page
-www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts])
-! Youtube mobile uses `ytm-reel-shelf-renderer` which is blocked further down
-
-!-------------------------------------------------------------------------------!
-
-! Youtube Search
-
-! Hide related searches and related results from the YouTube search results, only leaving organic matches for your search
-www.youtube.com##ytd-search ytd-item-section-renderer ytd-shelf-renderer
-m.youtube.com##ytm-search ytm-video-with-context-renderer:has(ytm-badge:contains(Related))
-
-# Hide single shorts shown as a separate item (instead of a reel) in search results
-! TODO Does desktop also have such results?
-m.youtube.com##ytm-search ytm-media-item.big-shorts-singleton
 
 !-------------------------------------------------------------------------------!
 
@@ -98,18 +79,5 @@ www.youtube.com##ytd-watch-flexy div.videowall-endscreen
 ! The the extra tiles between the description box and the comments which mentions
 ! the game name and a Youtube generic channel like "Gaming" to browse
 www.youtube.com##ytd-watch-flexy ytd-watch-metadata div#above-the-fold + ytd-metadata-row-container-renderer
-
-!-------------------------------------------------------------------------------!
-
-! Youtube Shorts
-
-! Hide Youtube Shorts reels (affects many pages)
-www.youtube.com##ytd-reel-shelf-renderer
-m.youtube.com##ytm-reel-shelf-renderer
-
-! Hide Youtube Shorts player
-! Need to remove them because they autoplay otherwise
-www.youtube.com##ytd-shorts:remove()
-m.youtube.com##shorts-player:remove()
 
 !-------------------------------------------------------------------------------!
