@@ -1,17 +1,7 @@
 ! Title: Youtube Waste Time Exceptions
 ! Description: Exceptions filter to be enabled when wanting to explore content. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2025.01.31-00
-
-!-------------------------------------------------------------------------------!
-
-! Youtube Sidebar
-
-! Hide Explore section from sidebar
-www.youtube.com#@#ytd-guide-renderer > #sections > ytd-guide-section-renderer:has(h3:contains(Explore))
-
-! Hide More from Youtube in the sidebar
-www.youtube.com#@#ytd-guide-renderer > #sections > ytd-guide-section-renderer:has(h3:contains(More from YouTube))
+! Version: 2025.01.31-01
 
 !-------------------------------------------------------------------------------!
 
