@@ -1,0 +1,13 @@
+! Title: Better Youtube Search
+! Description: Block irrelevant Youtube Search results. Meant to be compatible with Adguard.
+! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
+! Version: 2025.01.31-00
+
+!-------------------------------------------------------------------------------!
+
+! Hide related searches and related results from the YouTube search results, only leaving organic matches for your search
+www.youtube.com##ytd-search ytd-item-section-renderer ytd-shelf-renderer
+m.youtube.com##ytm-search ytm-video-with-context-renderer:has(ytm-badge:contains(Related))
+
+
+
