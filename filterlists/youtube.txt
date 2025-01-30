@@ -1,7 +1,12 @@
 ! Title: Youtube Annoyances
 ! Description: Block Youtube annoyances. Meant to be compatible with Adguard.
 ! Homepage: https://github.com/evenost-helx/public/tree/master/filterlists
-! Version: 2025.01.31-00
+! Version: 2025.01.31-01
+
+!-------------------------------------------------------------------------------!
+
+! Remove the box asking to enable Youtube History back on again
+www.youtube.com##ytd-feed-nudge-renderer
 
 !-------------------------------------------------------------------------------!
 
